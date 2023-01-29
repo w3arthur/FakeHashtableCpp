@@ -5,8 +5,6 @@
 #include "../HashtableLib/pch.h"
 #include <Hashtable.h>
 
-#include <iomanip>
-
 //credits to https://www.youtube.com/watch?v=kQsHF7C-FUY
 
 int main()
