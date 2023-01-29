@@ -2,13 +2,13 @@
 #include "Hashtable.h"
 
 
-int Hashtable::HashFunction_GetIndex(const string& entryString) const
+int HashTable::HashFunction_GetIndex(const string& entryString) const
 {
 	return entryString.back() - 'a';	//entryString[entryString.size() - 1];//last char
 	// 27 = a, ascii key
 }
 
-bool Hashtable::Find(const string& entryString, int* outIndex = nullptr) const
+bool HashTable::Find(const string& entryString, int* outIndex = nullptr) const
 {
 	int index = HashFunction_GetIndex(entryString);
 	while (true)
@@ -25,7 +25,7 @@ bool Hashtable::Find(const string& entryString, int* outIndex = nullptr) const
 	return false;
 }
 
-int Hashtable::GetFreeIndex(const string& entryString) const
+int HashTable::GetFreeIndex(const string& entryString) const
 {
 	int index = HashFunction_GetIndex(entryString);
 	while (true)
@@ -39,7 +39,7 @@ int Hashtable::GetFreeIndex(const string& entryString) const
 	return -1;
 }
 
-void Hashtable::Add(const string& entryString)
+void HashTable::Add(const string& entryString)
 {
 	const bool exists{ Find(entryString) };
 	if (!exists)
@@ -50,7 +50,7 @@ void Hashtable::Add(const string& entryString)
 	}
 }
 
-void Hashtable::Delete(const string& entryString)
+void HashTable::Delete(const string& entryString)
 {
 	int index;
 	const bool exists{ Find(entryString, &index) };
@@ -58,7 +58,7 @@ void Hashtable::Delete(const string& entryString)
 		m_Entries[index].Status = "tombstone";
 }
 
-void Hashtable::SetValues(const string& input)
+void HashTable::SetValues(const string& input)
 {
 
 	stringstream ss(input);
@@ -68,7 +68,7 @@ void Hashtable::SetValues(const string& input)
 		string token;
 		ss >> token;
 
-		string entryString = token.substr(1);		//&token[1];
+		string entryString = token.empty() ? "" : token.substr(1);		//&token[1];
 		//cout << "token" << ++i << " (" << token << ")" << endl;
 
 		if (token[0] == 'A')
@@ -84,7 +84,7 @@ void Hashtable::SetValues(const string& input)
 	}
 }
 
-const string Hashtable::Print() const
+const string HashTable::Print() const
 {
 	string str{ "" };
 	char character{ 'a' };

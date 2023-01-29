@@ -7,14 +7,14 @@
 //#include <sstream>
 //using std::stringstream;
 
-class Hashtable
+class HashTable
 {
 private:
 	static const int Size = 26;
 	class Entry m_Entries[Size];
 
 public:
-	Hashtable() = default;
+	HashTable() = default;
 
 private:
 	int HashFunction_GetIndex(const string&) const;	//Hash Key for 26 slots

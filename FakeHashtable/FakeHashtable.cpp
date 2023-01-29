@@ -2,24 +2,35 @@
 //
 
 //#include <iostream>
-#include "../HashtableLib/pch.h"
-#include <Hashtable.h>
+//#include "../HashtableLib/pch.h"
+#include <pch.h>
+
+#include <HashTable.h>
 
 //credits to https://www.youtube.com/watch?v=kQsHF7C-FUY
 
-int main()
+int main(int argc, char* argv[])
 {
 	std::cout << "Hello World!\n";
 
+	std::stringstream ss;
+	string str;
+	for (size_t i{ 1 }; i < argc; ++i)
+	{
+		str = str + static_cast<string>(argv[i]) + " ";
+	}
 
-	const string input{ "Aapple Aorange Dapple Agrape Asttrawberry" };
+	const string input{ str };
 
 
-	Hashtable hashtable;
+	//const string input{ "Aapple Aorange Dapple Agrape Asttrawberry" };
 
-	hashtable.SetValues(input);
 
-	hashtable.Print();
+	HashTable hashTable;
+
+	hashTable.SetValues(input);
+
+	hashTable.Print();
 
 
 }

@@ -141,12 +141,12 @@
   <ItemGroup>
     <ClInclude Include="Entry.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="Hashtable.h" />
+    <ClInclude Include="HashTable.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp" />
-    <ClCompile Include="Hashtable.cpp" />
+    <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="HashtableLib.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

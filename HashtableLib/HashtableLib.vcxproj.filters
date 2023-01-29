@@ -21,7 +21,7 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Hashtable.h">
+    <ClInclude Include="HashTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Entry.h">
@@ -35,7 +35,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Hashtable.cpp">
+    <ClCompile Include="HashTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Entry.cpp">

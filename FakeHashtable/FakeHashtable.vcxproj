@@ -133,6 +133,11 @@
   <ItemGroup>
     <ClCompile Include="FakeHashtable.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HashtableLib\HashtableLib.vcxproj">
+      <Project>{414cab7d-333f-4b51-b25b-bbbe03a6278c}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
